@@ -24,3 +24,17 @@ Authentication data
 		2. public users:
 			- username: user1 / password: user1
 			- username: user2 / password: user2
+	
+###########################			
+
+For project assignment please do take into account the followings (on top of what will be requested within the assignment):
+
+Code:
+
+- do write back and front end tests
+- implement exception handling
+
+Design:
+
+- take care of back end app layering, modularity and good technologies usage
+- implement front end single page app using angular/ember JS (if possible), take care of modularity

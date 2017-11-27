@@ -64,11 +64,14 @@ public class JournalRestService {
 
 	@RequestMapping(value = "/subscriptions")
 	public List<SubscriptionDTO> getUserSubscriptions(@AuthenticationPrincipal Principal principal) {
+		
 		CurrentUser activeUser = (CurrentUser) ((Authentication) principal).getPrincipal();
 		User persistedUser = userService.findById(activeUser.getId());
 		List<Subscription> subscriptions = persistedUser.getSubscriptions();
 		List<Category> categories = categoryRepository.findAll();
+		
 		List<SubscriptionDTO> subscriptionDTOs = new ArrayList<>(categories.size());
+		
 		categories.stream().forEach(c -> {
 			SubscriptionDTO subscr = new SubscriptionDTO(c);
 			Optional<Subscription> subscription = subscriptions.stream().filter(s -> s.getCategory().getId().equals(c.getId())).findFirst();
