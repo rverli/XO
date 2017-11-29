@@ -26,15 +26,21 @@ public class Producer implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
+		ObjectMapper objectMapper = new ObjectMapper();
+		
 		EmailDTO e1 = new EmailDTO("teste@teste.com", "body email");
 		
 		String jsonInString = null;
 		
 		try {
 			//Convert object to JSON string and pretty print
-			jsonInString = new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString( e1 );
+			jsonInString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString( e1 );
 			System.out.println(jsonInString);
 
+			// Convert JSON string to Object
+			EmailDTO user1 = objectMapper.readValue(jsonInString, EmailDTO.class);
+			System.out.println(user1);
+			
 		} catch (JsonGenerationException e) {
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
