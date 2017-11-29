@@ -1,8 +1,13 @@
 package com.crossover.trial.journals.dto;
 
-public class EmailDTO {
+import java.io.Serializable;
 
-	 	private String to;
+public class EmailDTO implements Serializable{
+
+	 	
+	private static final long serialVersionUID = 1L;
+	
+		private String to;
 	    private String body;
 
 	    public EmailDTO() {
