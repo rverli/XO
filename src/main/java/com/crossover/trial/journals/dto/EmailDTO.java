@@ -9,13 +9,15 @@ public class EmailDTO implements Serializable{
 	
 		private String to;
 	    private String body;
+	    private String subject;
 
 	    public EmailDTO() {
 	    }
 
-	    public EmailDTO(String to, String body) {
+	    public EmailDTO(String to, String subject, String body) {
 	        this.to = to;
 	        this.body = body;
+	        this.subject = subject;
 	    }
 
 	    public String getTo() {
@@ -38,4 +40,12 @@ public class EmailDTO implements Serializable{
 	    public String toString() {
 	        return String.format("Email{to=%s, body=%s}", getTo(), getBody());
 	    }
+
+		public String getSubject() {
+			return subject;
+		}
+
+		public void setSubject(String subject) {
+			this.subject = subject;
+		}
 }
