@@ -1,4 +1,4 @@
-package com.crossover.trial.journals.service;
+package com.crossover.trial.journals.service.impl;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,6 +14,8 @@ import com.crossover.trial.journals.model.Publisher;
 import com.crossover.trial.journals.model.User;
 import com.crossover.trial.journals.repository.CategoryRepository;
 import com.crossover.trial.journals.repository.UserRepository;
+import com.crossover.trial.journals.service.JournalService;
+import com.crossover.trial.journals.util.exception.ServiceException;
 import com.crossover.trial.journals.model.Subscription;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

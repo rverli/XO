@@ -1,6 +1,8 @@
 package com.crossover.trial.journals.dto;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 
 public class EmailDTO implements Serializable{
 
@@ -10,14 +12,17 @@ public class EmailDTO implements Serializable{
 		private String to;
 	    private String body;
 	    private String subject;
-
+	    
+	    private List<Map<String, String>> attachments;
+	    
 	    public EmailDTO() {
 	    }
 
-	    public EmailDTO(String to, String subject, String body) {
+	    public EmailDTO(String to, String subject, String body, List<Map<String, String>> attachments) {
 	        this.to = to;
 	        this.body = body;
 	        this.subject = subject;
+	        this.attachments = attachments;
 	    }
 
 	    public String getTo() {
@@ -38,7 +43,7 @@ public class EmailDTO implements Serializable{
 
 	    @Override
 	    public String toString() {
-	        return String.format("Email{to=%s, body=%s}", getTo(), getBody());
+	        return String.format("Email{to=%s, body=%s, subject=%s}", getTo(), getBody(), getSubject());
 	    }
 
 		public String getSubject() {
@@ -47,5 +52,13 @@ public class EmailDTO implements Serializable{
 
 		public void setSubject(String subject) {
 			this.subject = subject;
+		}
+
+		public List<Map<String, String>> getAttachments() {
+			return attachments;
+		}
+
+		public void setAttachments(List<Map<String, String>> attachments) {
+			this.attachments = attachments;
 		}
 }

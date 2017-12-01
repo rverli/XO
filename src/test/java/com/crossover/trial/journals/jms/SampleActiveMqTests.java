@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.OutputCapture;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.crossover.trial.journals.service.jms.ProducerJMSJournalsService;
+
 @Ignore
 //@RunWith(SpringRunner.class)
 @SpringBootTest
@@ -20,7 +22,7 @@ public class SampleActiveMqTests {
 	public OutputCapture outputCapture = new OutputCapture();
 
 	@Autowired
-	private Producer producer;
+	private ProducerJMSJournalsService producer;
 
 	@Test
 	public void sendSimpleMessage() throws InterruptedException, JMSException {

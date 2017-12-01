@@ -1,4 +1,4 @@
-package com.crossover.trial.journals.service;
+package com.crossover.trial.journals.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import com.crossover.trial.journals.model.Subscription;
 import com.crossover.trial.journals.model.User;
 import com.crossover.trial.journals.repository.UserRepository;
+import com.crossover.trial.journals.service.UserService;
+import com.crossover.trial.journals.util.exception.ServiceException;
 
 @Service
 public class UserServiceImpl implements UserService {

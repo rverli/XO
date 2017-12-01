@@ -1,8 +1,10 @@
-package com.crossover.trial.journals.service;
+package com.crossover.trial.journals.util.exception;
 
 public class ServiceException extends RuntimeException {
 
-    public ServiceException(String message) {
+	private static final long serialVersionUID = 1L;
+
+	public ServiceException(String message) {
         super(message);
     }
 

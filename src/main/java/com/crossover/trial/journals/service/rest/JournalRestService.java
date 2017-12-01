@@ -1,4 +1,4 @@
-package com.crossover.trial.journals.rest;
+package com.crossover.trial.journals.service.rest;
 
 import java.security.Principal;
 import java.util.ArrayList;

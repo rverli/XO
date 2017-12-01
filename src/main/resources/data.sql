@@ -6,11 +6,11 @@ INSERT INTO user(login_name, pwd, enabled, role) VALUES ('user2', '$2a$10$Q5bxyP
 INSERT INTO publisher(user_id, name) VALUES (1, 'Test Publisher1 ');
 INSERT INTO publisher(user_id, name) VALUES (2, 'Test Publisher 2');
 
-INSERT INTO category(id, name) VALUE (1, 'immunology');
-INSERT INTO category(id, name) VALUE (2, 'pathology');
-INSERT INTO category(id, name) VALUE (3, 'endocrinology');
-INSERT INTO category(id, name) VALUE (4, 'microbiology');
-INSERT INTO category(id, name) VALUE (5, 'neurology');
+INSERT INTO category(id, name) VALUES (1, 'immunology');
+INSERT INTO category(id, name) VALUES (2, 'pathology');
+INSERT INTO category(id, name) VALUES (3, 'endocrinology');
+INSERT INTO category(id, name) VALUES (4, 'microbiology');
+INSERT INTO category(id, name) VALUES (5, 'neurology');
 
 
 INSERT INTO journal(id, publisher_id, category_id, name, publish_date, uuid) VALUES(1, 1, 3, 'Medicine', NOW(), '8305d848-88d2-4cbd-a33b-5c3dcc548056');

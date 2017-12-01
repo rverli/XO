@@ -1,4 +1,4 @@
-package com.crossover.trial.journals.rest;
+package com.crossover.trial.journals.service.rest;
 
 import com.crossover.trial.journals.model.Category;
 import com.crossover.trial.journals.repository.CategoryRepository;

@@ -13,8 +13,9 @@ import com.crossover.trial.journals.model.Publisher;
 import com.crossover.trial.journals.model.User;
 import com.crossover.trial.journals.repository.PublisherRepository;
 import com.crossover.trial.journals.service.JournalService;
-import com.crossover.trial.journals.service.ServiceException;
 import com.crossover.trial.journals.service.UserService;
+import com.crossover.trial.journals.util.exception.ServiceException;
+
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
