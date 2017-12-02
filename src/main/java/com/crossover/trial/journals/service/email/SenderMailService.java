@@ -23,7 +23,7 @@ public class SenderMailService {
     public void enviar( EmailDTO emailDTO ) throws MessagingException {
     	
     	//Autorizacao para enviar email no google
-    	//https://productforums.google.com/forum/#!topic/gmail-pt/EmEowutQ9Js
+    	//https://support.google.com/accounts/answer/6010255?hl=pt-BR
     	
         MimeMessage message = mailSender.createMimeMessage();
         

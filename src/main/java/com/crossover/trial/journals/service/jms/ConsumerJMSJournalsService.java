@@ -1,11 +1,6 @@
 package com.crossover.trial.journals.service.jms;
 
-import java.io.IOException;
-
-import javax.mail.MessagingException;
-
 import org.apache.log4j.Logger;
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
@@ -18,7 +13,7 @@ import com.crossover.trial.journals.util.exception.ServiceException;
 @Service
 public class ConsumerJMSJournalsService {
 
-	private final static Logger log = Logger.getLogger(ConsumerJMSJournalsService.class);
+	private final static Logger log = Logger.getLogger( ConsumerJMSJournalsService.class );
 	
 	@Autowired
 	private SenderMailService senderMailService;

@@ -18,7 +18,7 @@ public class Application {
 
 	public static final String ROOT;
 	
-	private final static Logger log = Logger.getLogger(Application.class);
+	private final static Logger log = Logger.getLogger( Application.class );
 
 	static {
 		ROOT = System.getProperty("upload-dir", System.getProperty("user.home") + "/Documents/upload");
