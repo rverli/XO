@@ -37,16 +37,16 @@ public class SenderMailService {
         
         if ( atts != null && atts.size() > 0 ) {
 			
-        	for (Map<String, String> att : atts) {
-        		
-        		for ( Map.Entry<String, String> entry : att.entrySet()) {
-        		    
-        			String fileName = entry.getKey();
-        		    String path = entry.getValue();
-        		    
-        		    ClassPathResource file = new ClassPathResource( path );
-        		    helper.addAttachment( fileName, file );
-        		}
+	        	for (Map<String, String> att : atts) {
+	        		
+	        		for ( Map.Entry<String, String> entry : att.entrySet()) {
+	        		    
+	        			String fileName = entry.getKey();
+	        		    String path = entry.getValue();
+	        		    
+	        		    ClassPathResource file = new ClassPathResource( path );
+	        		    helper.addAttachment( fileName, file );
+	        		}
 			}
 		}
         

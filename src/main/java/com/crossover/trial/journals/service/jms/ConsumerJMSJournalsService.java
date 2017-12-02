@@ -29,10 +29,10 @@ public class ConsumerJMSJournalsService {
 		try {
 			EmailDTO email = JsonUtil.jsonToEmailDTO( text );
 			
-			senderMailService.enviar( JsonUtil.jsonToEmailDTO( text ) );
+			senderMailService.enviar( email );
 			
 			log.info( "Email sent to: " + email.getTo());
-		} catch (JSONException | MessagingException | IOException e) {
+		} catch (Exception e) {
 			log.error( e.getMessage() );
 			throw new ServiceException( "Error trying send email", e );
 		}
